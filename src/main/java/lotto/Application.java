@@ -36,9 +36,11 @@ public class Application {
         List<Integer> winning = new ArrayList<Integer>();
 
         for (String number:win){
-            lottoException.isNumberInRange(Integer.parseInt(number));
+            lottoException.isValidNumberRange(Integer.parseInt(number));
             winning.add(Integer.parseInt(number));
         }
+
+
 
         System.out.println("보너스 번호를 입력해주세요.");
         int bonusNumber = Integer.parseInt(Console.readLine());
