@@ -40,7 +40,7 @@ public class Application {
             winning.add(Integer.parseInt(number));
         }
 
-
+        lottoException.isValidLottoSize(winning);
 
         System.out.println("보너스 번호를 입력해주세요.");
         int bonusNumber = Integer.parseInt(Console.readLine());

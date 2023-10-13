@@ -1,5 +1,7 @@
 package lotto;
 
+import java.util.List;
+
 public class LottoException {
 
     public void isPurchaseDividable(int purchase) {
@@ -14,5 +16,9 @@ public class LottoException {
         }
     }
 
-    public void
+    public void isValidLottoSize(List<Integer> lottolist){
+        if (lottolist.size()!=6){
+            throw new IllegalArgumentException();
+        }
+    }
 }
