@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Lotto {
     private final List<Integer> numbers;
+    private LottoWinning lottoWinning;
 
     public Lotto(List<Integer> numbers) {
         validate(numbers);
@@ -17,5 +18,16 @@ public class Lotto {
     }
 
     // TODO: 추가 기능 구현
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
+
+    public void setLottoWinning(LottoWinning lottoWinning){
+        this.lottoWinning = lottoWinning;
+    }
+
+    public LottoWinning getLottoWinning() {
+        return lottoWinning;
+    }
 
 }

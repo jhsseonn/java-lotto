@@ -29,6 +29,8 @@ public class Application {
             System.out.println(lottoList.get(i));
         }
 
+        System.out.println("당첨 번호를 입력해주세요.");
+
         String win[] = Console.readLine().split(",");
         List<Integer> winning = new ArrayList<Integer>();
 
@@ -36,7 +38,52 @@ public class Application {
             winning.add(Integer.parseInt(number));
         }
 
+        System.out.println("보너스 번호를 입력해주세요.");
         int bonusNumber = Integer.parseInt(Console.readLine());
+
+        int first = 0;
+        int second = 0;
+        int third = 0;
+        int fourth = 0;
+        int fifth = 0;
+
+        for (Lotto list:lottoList){
+            int countSame = 0;
+            for (Integer num:winning){
+                List<Integer> numbers = list.getNumbers();
+                if (numbers.contains(num)) {
+                    countSame+=1;
+                }
+            }
+
+            if (countSame==6){
+                list.setLottoWinning(LottoWinning.FIRST);
+            } else if (countSame==5){
+                if (list.getNumbers().contains(bonusNumber)) {
+                    list.setLottoWinning(LottoWinning.SECOND);
+                } else {
+                    list.setLottoWinning(LottoWinning.THIRD);
+                }
+            } else if (countSame==4) {
+                list.setLottoWinning(LottoWinning.FOURTH);
+            } else if (countSame==3) {
+                list.setLottoWinning(LottoWinning.FIFTH);
+            }
+
+            if (list.getLottoWinning()==LottoWinning.FIRST) {
+                first+=1;
+            } else if (list.getLottoWinning()==LottoWinning.SECOND) {
+                second+=1;
+            } else if (list.getLottoWinning()==LottoWinning.THIRD) {
+                third+=1;
+            } else if (list.getLottoWinning()==LottoWinning.FOURTH) {
+                fourth+=1;
+            } else if (list.getLottoWinning()==LottoWinning.FIFTH) {
+                fifth+=1;
+            }
+        }
+
+
 
 
     }
