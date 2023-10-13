@@ -83,8 +83,18 @@ public class Application {
             }
         }
 
+        int revenue = first*2000000000+second*30000000+third*1500000+fourth*50000+fifth*5000;
 
+        int revPercent = revenue/purchase*100;
 
+        System.out.println("당첨 통계\n" +
+                "---\n" +
+                "3개 일치 (5,000원) - "+fifth+"개\n" +
+                "4개 일치 (50,000원) - "+fourth+"개\n" +
+                "5개 일치 (1,500,000원) - "+third+"개\n" +
+                "5개 일치, 보너스 볼 일치 (30,000,000원) - "+second+"개\n" +
+                "6개 일치 (2,000,000,000원) - "+first+"개\n" +
+                "총 수익률은 "+revPercent+"%입니다.");
 
     }
 }
