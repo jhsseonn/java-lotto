@@ -29,7 +29,14 @@ public class Application {
             System.out.println(lottoList.get(i));
         }
 
+        String win[] = Console.readLine().split(",");
+        List<Integer> winning = new ArrayList<Integer>();
 
+        for (String number:win){
+            winning.add(Integer.parseInt(number));
+        }
+
+        int bonusNumber = Integer.parseInt(Console.readLine());
 
 
     }
