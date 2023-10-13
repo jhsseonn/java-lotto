@@ -45,6 +45,8 @@ public class Application {
         System.out.println("보너스 번호를 입력해주세요.");
         int bonusNumber = Integer.parseInt(Console.readLine());
 
+        lottoException.isValidNumberRange(bonusNumber);
+
         int first = 0;
         int second = 0;
         int third = 0;
