@@ -7,4 +7,10 @@ public class LottoException {
             throw new IllegalArgumentException();
         }
     }
+
+    public void isNumberInRange(int number){
+        if (number>45 && number<1) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

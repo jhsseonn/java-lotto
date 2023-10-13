@@ -36,7 +36,7 @@ public class Application {
         List<Integer> winning = new ArrayList<Integer>();
 
         for (String number:win){
-//            lottoException.isNumberInRange(Integer.parseInt(number));
+            lottoException.isNumberInRange(Integer.parseInt(number));
             winning.add(Integer.parseInt(number));
         }
 
